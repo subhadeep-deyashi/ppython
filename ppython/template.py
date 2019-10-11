@@ -22,7 +22,7 @@ class ppp:
     
     def stroke(self, color):
         self.Stroke_ = color
-    
+        
     def fill(self, color):
         self.Fill_ = color
     
@@ -168,7 +168,6 @@ _p = ppp(root)
 width = _p.width
 height = _p.height
 
-===||===
 
 def motion(event):
     _p.mouseX, _p.mouseY = event.x, event.y
