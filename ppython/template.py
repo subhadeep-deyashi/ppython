@@ -33,6 +33,9 @@ class ppp:
         self.canvas.create_oval(x, y, x+sizeX, y+sizeY, width=self.StrokeSize_, fill=self.Fill_,
             outline=self.Stroke_)
     
+    def text(self, txt, x, y):
+        self.canvas.create_text(txt, x, y)
+    
     def rect(self, x, y, sizeX, sizeY):
         self.canvas.create_rectangle(x, y, x+sizeX, y+sizeY, width=self.StrokeSize_, fill=self.Fill_,
             outline=self.Stroke_)
@@ -169,7 +172,6 @@ height = _p.height
 
 def motion(event):
     _p.mouseX, _p.mouseY = event.x, event.y
-    #print('{}, {}'.format(x, y))
 
 root.bind('<Motion>', motion)
 root.mainloop()
